@@ -19,3 +19,63 @@ x=car.values()#Print the values
 print(x)
 print(len(car))
 print(type(car))
+#another program
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+
+for n in favorite_languages.keys(): #for name in favorite_languages: will also give you the same result
+  print(n)
+print()
+#Two different ways of outputting values
+for d in favorite_languages.values():
+  print(d)
+
+print()
+for x,y in favorite_languages.items():
+  print(y) # y is values
+  #print(x,y)
+for x,y in favorite_languages.items():
+  print(x) # x is keys
+for name in favorite_languages.keys():
+  print(name.title() + ", thank you for taking the poll.")
+  print()
+for name in sorted(favorite_languages.keys()):
+ print(name.title() , ", thank you for taking the poll.")
+ 
+ #another program
+  country = {
+    'nile': 'egypt',
+    'mississippi': 'united states',
+    'fraser': 'canada',
+    'kuskokwim': 'alaska',
+    'yangtze': 'china'
+ }
+ for x, y in country.items():
+  print('The ' + x.capitalize() + ' flows through '  + y.capitalize())
+  
+  #another program
+  """Create a dictionary of countries - Kenya, Korea, Georgia, Tibet, Myanmar, Brazil, Cuba with their capitals . Print the keys and values of your dictionary. Use popitem to delete the last item in your dictionary """
+countries = {
+  "Kenya": "Nairobi",
+  "Korea": "Seoul",
+  "Georgia": "Tbilisi",
+  "Tibet": "Lhasa",
+  "Myanmar": "Naypyidaw",
+  "Brazil": "Brasília",
+  "Cuba": "Havana"
+}
+
+for key in countries.items():
+  print(countries)
+for y in sorted (countries.keys()):
+  print(y,',sorted the key values')
+  print()
+for x in countries.values():
+  print(x.title()+',captial')   
+  print()
+countries.popitem()   
+print(countries)
