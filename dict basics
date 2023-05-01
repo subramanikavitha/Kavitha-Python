@@ -1,0 +1,21 @@
+#Dict:
+car = {
+ "brand":"Honda",
+ "model" :"Civic",
+"year":2020,
+"year":2023, #overwrites the previous year
+"list_fruits":["apple","banana"]#you can have lists in dict
+}
+print(car)
+car.update({"year":2020})#update the year to 2020
+print(car["brand"])#way 1-print part of dictionary
+x=car['model']
+print(x)#way 2 -print an item in dict
+x=car.get("year")
+print(x)#way 3 - print an item in dict
+x=car.keys()#print the keys
+print(x)
+x=car.values()#Print the values
+print(x)
+print(len(car))
+print(type(car))
