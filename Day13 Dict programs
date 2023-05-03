@@ -1,0 +1,154 @@
+users ={
+ "name" : {
+      "firstname" : "kavitha",
+       "lastname" : "subramani",
+        "location":"Canada",
+
+},
+"name1" : {
+ 
+   "firstname" : "kavitha",
+       "lastname" : "subramani",
+        "location":"Canada",
+},
+
+}
+for username,user_info in users.items():
+ print("\nUsername:" + username)
+ full_name = user_info['firstname'] +"  "+ user_info['lastname']
+ location = user_info['location']
+ print("\nFull name:" +full_name.title())
+ print("\nlocation:" + location.title())
+##############
+
+favorite_languages = {'jen': 'python', 'sarah': 'c', 'edward': 'ruby', 'phil': 'python', 'laya':'javascript '}
+names = ['jen', 'sarah', 'edward', 'phil', 'laya', 'john', 'jane']
+
+for name in names:
+    if name in favorite_languages:
+        print("Thank you for taking the poll", name.title())
+    else:
+        print(name.title(), "what's your favorite programming language?")
+##########################
+
+cities = {
+    'New York':
+    {
+      'country': 'United States', 
+      'population': 838174,
+      'fact': 'The new york city every one like.'
+    },
+    'Tokyo':
+     {
+         'country': 'Japan',
+         'population': 151271, 
+         'fact': 'Tokyo people are so good .'
+    },
+    'Paris': 
+    {
+        'country': 'France', 
+        'population': 212345, 
+        'fact': 'Every one like the city.'
+   }
+}
+
+for city, info in cities.items():
+    print("\ncity:")
+    for key, value in info.items():
+     print(key.title(), value)
+
+##########################################
+
+# Dictionary revision task 1: 
+
+"""
+A UFO has landed with 3 aliens in it...! 
+Create a profile for each alien 
+(hint: each alien will have its own dictionary e.g. Name, color, height)
+A kid witnessed these aliens... !!
+Now ask the kid (user) to describe what an alien looks like (e.g. color). 
+Compare the userinput with each of the three aliens and output the name of the alien the kid was describing. 
+Print a fun newspaper headline!
+Extension- Output the description of all three aliens.
+
+Sample output-
+The color of the alien was: green
+Attention! A kid withessed aliens at his backyard!
+
+
+
+1 - Create 3 dictionaries
+2 - Get user / kids input
+3 - Compare the input from the user to colour key in dictionary 
+4 - If they are same - then print the newspaper headline
+"""
+#program
+alien1 = {
+'name': 'Hugo',
+'color': 'green',
+'height': '153',
+'eyes':  'happy'  
+}
+alien2 = {
+'name': 'Riley',
+'color': 'gray',
+'height': '180',
+'eyes':  'sad'  
+}
+alien3 = {
+'name': 'Ellen',
+'color': 'yellow',
+'height': '125',
+'eyes':  'kind'  
+}
+
+color = input("The color of the alien was: ")
+if alien1['color']==color or alien2['color']==color or alien3['color']==color: 
+  print("Attention! A kid withessed aliens at his backyard!")
+else:
+  print("No aliens have been found!")  
+
+
+
+or(Another Method)
+
+
+alien1={'name':'bantaf','color':'green','height':'7.19 meters'}
+alien2={'name':'lemwin','color':'grey','height':'6.23 meters'}
+alien3={'name':'jastyn','color':'blue','height':'7.12 meters'}
+
+userinput=input('What color was the alien you spotted?')
+
+if userinput in alien1['color']:
+  print('Kid spotted', alien1['name'].title()+'- a friendly',alien1['color'],'alien!')
+elif userinput in alien2['color']:
+  print('Kid spotted', alien2['name'].title()+'- a friendly',alien2['color'],'alien!')
+elif userinput in alien3['color']:
+  print('Kid spotted', alien3['name'].title()+'- a friendly',alien3['color'],'alien!')
+
+Aliens=[alien1,alien2,alien3]
+print(Aliens)
+print("\nAliens spotted!")
+for alien in Aliens: # looping through the list
+  print('\t-',alien['name'].title(),'is',alien['color'],'and is',alien['height'],'long.')
+
+###################################
+
+"""Pets: Make several dictionaries, where the name of each dictionary is the 
+name of a pet. In each dictionary, include the kind of animal and the owner’s 
+name. Store these dictionaries in a list called pets. Next, loop through your list 
+and as you do print everything you know about each pet.
+"""
+
+pets = [
+    {"name": "Meow", "kind": "cat", "owner": "Tim"},
+    {"name": "Fido", "kind": "dog", "owner": "Tom"},
+    {"name": "Google", "kind": "fish", "owner": "Jim"}
+]
+
+for pet in pets:
+    print("Name:",pet['name'])
+    print("Kind:" ,pet['kind'])
+    print("Owner:",pet['owner'])
+####################################
+
