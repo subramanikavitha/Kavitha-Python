@@ -1,0 +1,177 @@
+""" Make a dictionary called favorite_places. 
+Think of three names to use as keys in the dictionary, and store one to three favorite places 
+for each person. Loop through the dictionary, and print each person’s name and their favorite places """
+
+favorit_place = {'toronto':{
+    "jim": "zoo",
+    "mary":"park",
+    "tim" : "mall",
+
+},
+    'alberta':{
+        "jack": "mall",
+         "mario":"lake",
+         "adam":"casino",
+    },
+    "halifax":{
+          "jack": "lake",
+         "mario":"mall",
+         "adam":"casino",
+    }
+}
+for city, info in favorit_place.items():
+    print("\ncity:",city)
+    for key, value in info.items():
+     print(key.title(), value)
+
+##################
+favorite_places = {
+    'Tim': ['Paris', 'Dubai', 'Tokyo'],
+    'Mario': ['London', 'Denmark','Canada'],
+    'Adam': ['China','USA','India']
+}
+
+for name, places in favorite_places.items():
+    print(name, "favorite places are:")
+    for place in places:
+        print(place)
+
+
+######################
+'''
+Make a dictionary of a coffee shop menu with prices and print the keys and values of it
+example: 
+coffee:12$
+tea:7$
+iced coffee:13$
+'''
+
+coffee_shop_menu={
+        'coffee':'12$',
+        'tea':'7$',
+        'iced_coffee':'13$',
+  }
+for key in coffee_shop_menu.keys():
+  print(key)
+for value in coffee_shop_menu.values():
+  print(value)
+for x,y in coffee_shop_menu.items():
+  print(key+":"+value)
+
+##################################
+def myfunction():#define the function
+  print("This is my first function")
+myfunction()#calling the function
+myfunction()
+myfunction()
+myfunction()
+def function1():
+  print("another function")
+function1()
+def function2():
+  print("Life is beautiful")
+function2()
+############################
+favorite_numbers = {
+    'John': 7,
+    'Sarah': 3,
+    'Mike': 42,
+    'Linda': 13,
+    'Tom': 8
+}
+
+for name, number in favorite_numbers.items():
+    print(name,"s favorite number is:",number)
+
+favorite_numbers = {
+    'kavitha': [3, 7],
+    'mary': [2, 4],
+    'mike': [1, 5, 9],
+}
+
+for name, numbers in favorite_numbers.items():
+    print(name + "'s favorite numbers are:")
+   # for number in numbers:
+    #  print("\t",number)
+    for i in range(len(numbers)):
+     print('\t',numbers[i])
+
+#######################################
+pchoice={
+     "John" : {"food":"Dosa","animal":"dog","palce":"Ontario"},
+     "Reetu" : {"food":"Idly","animal":"cat","place":"Niagara"},
+     "Meenu" : {"food":"Pizza","animal":"fish","place":"paris"},
+     "Sonu": {"food":"pasta","animal":"bunny","place":"Newyork"}
+    }
+for person,p_info in pchoice.items():
+    print("\n",person ,"and his favorites")
+    for key in p_info:
+        
+        print(key + ':', p_info[key])
+###############################################
+
+"""
+Pets: Make several dictionaries, where the name of each dictionary is the 
+name of a pet. In each dictionary, include the kind of animal and the owner’s 
+name. Store these dictionaries in a list called pets. Next, loop through your list 
+and as you do print everything you know about each pet.
+
+sample output:
+	animal type: dog
+	name: peso
+	owner: eric
+	weight: 37
+	eats: shoes
+"""
+
+# Make an empty list to store the pets in.
+pets = []
+
+# Make individual pets, and store each one in the list.
+python = {
+    'animal type': 'python',
+    'name': 'john',
+    'owner': 'guido',
+    'weight': 43,
+    'eats': 'bugs',
+}
+pets.append(python)
+
+chicken = {
+    'animal type': 'chicken',
+    'name': 'clarence',
+    'owner': 'tiffany',
+    'weight': 2,
+    'eats': 'seeds',
+}
+pets.append(chicken)
+
+dog = {
+    'animal type': 'dog',
+    'name': 'peso',
+    'owner': 'eric',
+    'weight': 37,
+    'eats': 'shoes',
+}
+pets.append(dog)
+
+print(pets) # will show the list pets 
+
+# Display information about each pet.
+for p in pets:
+    print("\nHere's what I know about " + p['name'].title() + ":")
+    for key, value in p.items():
+       # print("\t" + key + ": " + str(value))
+       print("\t"+ key+":",value)
+ 
+##########################################
+favorite_places = {
+    'Tim': ['Paris', 'Dubai', 'Tokyo'],
+    'Mario': ['London', 'Denmark','Canada'],
+    'Adam': ['China','USA','India']
+}
+
+for name, places in favorite_places.items():
+    print(name, "favorite places are:")
+    for place in places:
+        print(place)
