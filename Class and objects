@@ -1,0 +1,489 @@
+class car:
+  colour="red"
+  model="civic"
+  transmission="automatic"
+
+honda=car() # honda is now an object in class car
+print("The details of the requested car model is :",honda.colour,honda.model,honda.transmission)
+
+class abc:
+  a=5
+  b=7
+obj = abc()
+print(obj.a,obj.b)
+
+class MyClass:
+    def __init__(self, x):
+        self.x = x
+
+    def add(self, y):
+        return self.x + y
+
+obj = MyClass(5)
+print(obj.add(3))
+
+class abc:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def add(self):
+        return self.a + self.b
+
+obj = abc(5,7)
+print("The output is :",obj.add())
+
+
+class person:
+  def __init__(self,name):
+   self.name=name
+  def walk(self):
+   print(self.name, 'can walk')
+
+p1=person('Amy')
+p2=person('kavita')
+p1.walk()
+p2.walk()
+#create a class - have init fn - 2 vars. another method to add these variables. print the output.
+class Addition:
+    # init method or constructor
+    def __init__(self):
+      self.var1 = int(input("enter the first number:"))
+      self.var2 = 70
+
+    def add(self):
+      print("the sum is",self.var1+self.var2)
+
+#main
+p1=Addition()
+p1.add()
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def addInfo(self):
+       # return self.name
+       print("Hello My name is:",self.name)
+
+obj = Person("kavitha")
+obj.addInfo()
+#print("The Person info is",obj.addInfo())
+
+
+# lets create a simple class called Dog
+# By convention, capitalized names refer to classes
+
+class Dog():
+  # this is a constructor - a method which is called automatically 
+  # when an object is created.
+  def __init__(self, n, age):  
+    # name and age are attributes here!!
+    self.name = n
+    self.age = age
+    self.breed = "husky"
+    print("testing")
+    
+  def printInfo(self):
+    print("Your dog", self.name, " is ", self.age, "years old.")
+    print("Your dog is a",self.breed,".")
+
+  def sit(self):
+    print(self.name, " is now sitting.")
+#dogA = Dog()
+dogA = Dog("Poppy", 2)
+dogA.breed="puppy"
+dogA.printInfo()
+print(dogA.breed)
+
+# A Sample class with init method
+class Person:
+	# init method or constructor
+	def __init__(self, name):
+		self.name = name
+	# Sample Method
+	def say_hi(self):
+		print('Hello, my name is', self.name)
+p1 = Person('Elena')
+p2 = Person('Ayodele')
+p3 = Person('Ravideep')
+x = Person('Tanya')
+p1.say_hi()
+p2.say_hi()
+p3.say_hi()
+x.say_hi()
+# lets create a simple class called Dog
+# By convention, capitalized names refer to classes
+
+class Dog():
+  def __init__(self, n, age):  
+    self.name = n
+    self.age = age
+    self.breed = "husky"
+    print("testing")
+    
+  def printInfo(self):
+    print("Your dog", self.name, " is ", self.age, "years old.")
+    print("Your dog is a",self.breed,".")
+
+  def sit(self):
+    print(self.name, " is now sitting.")
+dogA = Dog("Poppy", 2)
+dogA.breed="puppy"
+dogA.printInfo()
+print(dogA.breed)
+class triangle:
+    def __init__(self):
+        self.a = float(input("Enter first side: "))
+        self.b = float(input("Enter second side: "))
+        self.c = float(input("Enter third side: "))
+
+    def area(self):
+        s = (self.a + self.b + self.c) / 2
+        area = (s * (s - self.a) * (s - self.b) * (s - self.c)) ** 0.5
+        return area
+
+obj = triangle()
+print("Area of triangle:", obj.area())
+class Animal:
+    def set_name(self, name):
+        self.name = name
+
+    def speak(self):
+        pass
+
+class Dog(Animal):
+    def speak(self):
+        print("Woof!")
+
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+class pig(Animal):
+  def speak(self):
+    print("Oink")
+
+dog = Dog()
+dog.set_name("buddy")
+dog.speak()  # Output: Woof!
+
+cat = Cat()
+cat.set_name("Whiskers")
+cat.speak()  # Output: Meow!
+obj =pig()
+obj.speak()
+
+class square:
+    def __init__(self):
+        self.a =int(input("Enter the a value:"))
+
+    def area(self):
+        area= self.a ** 2
+        print("Area of square:",area)
+
+    def perimeter(self):
+        peri= 4 * self.a
+        print("Perimeter of square:", peri)
+obj = square()
+obj.area()
+obj.perimeter()
+
+#create a class named Vehicles and add 3 different vehicles into it
+class vehicles():
+  car="Honda"
+  bus="Go"
+  train="Metro"
+obj = vehicles()
+print("The Vehicles is:",obj.car,obj.bus,obj.train)
+
+def student_data(student_id, **kwargs):
+    print(f'\nStudent ID: {student_id}')
+    if 'student_name' in kwargs:
+        print(f"Student Name: $ {kwargs['student_name']}")
+    
+    if 'student_name' and 'student_class' in kwargs:
+            print(f"\nStudent Name: $ {kwargs['student_name']}")
+            print(f"Student Class: $ {kwargs['student_class']}")
+
+ 
+student_data(student_id='SV12', student_name='Jean Garner')
+
+student_data(student_id='SV12', student_name='Jean Garner', student_class ='V')
+# Task 1: create a class to calculate the area and perimeter of a square - square side - a, perimeter = 4a and area= a**2
+class sq:
+      # init method or constructor
+    def __init__(self):
+      self.a = int(input("enter first side "))
+
+    def area(self):
+      s=4*self.a 
+      area = self.a** 2
+      print("the perimeter of the square is",s)
+      print("the area is",area)
+
+#main
+p1=sq()
+p1.area()
+
+class Restaurant():
+   def __init__(self):
+
+      self.restaurant_name = input("enter the res name")
+      self.cuisine_type=input("Enter the cusio name")
+   def describle_restaurant(self):
+      print (self.restaurant_name , self.cuisine_type)
+   def open_restaurant(self):
+        print(self.restaurant_name ,'is open.')
+p1=Restaurant()
+p1.describle_restaurant()
+p1.open_restaurant()
+
+'''Restaurant: Make a class called Restaurant. The init() method for Restaurant should store two attributes: a restaurant_name and a cuisine_type.
+Make a method called 1.describe_restaurant() that prints these two pieces of information, and a 
+method called 2.open_restaurant() that prints a message indicating that the restaurant is open. 
+3.Make an instance called restaurant from your class.
+Print the two attributes individually, and then call both methods.'''
+
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print("The restaurant name is:",self.restaurant_name)
+        print("The cuisine type is:", self.cuisine_type)
+
+    def open_restaurant(self):
+        print(self.restaurant_name, "is now open")
+
+restaurant = Restaurant("The karaikudi", "India")
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+# Create three different instances from the class, and call describe_restaurant() for each instance.
+obj1=Restaurant("The saravanabavan","India")
+obj1.describe_restaurant()
+obj2=Restaurant("The Golden resturant","China")
+obj2.describe_restaurant()
+obj3=Restaurant("The canada list","Canada")
+obj3.describe_restaurant()
+
+class User():
+    def __init__(self, first_name, last_name, username, email, location,log_in_attempts):
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.log_in_attempts=log_in_attempts
+    def describe_user(self):
+        """Display a summary of the user's information."""
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+    def greet_user(self):
+        """Display a personalized greeting to the user."""
+        print("\nWelcome back, " + self.username + "!")
+
+    def increment_login_attempts(self):
+        self.log_in_attempts+=1
+        return self.log_in_attempts
+    
+    def reset_login_attempts(self):
+        self.log_in_attempts=0
+        return self.log_in_attempts
+    def reset_login_attempts(self):
+        self.log_in_attempts=0
+        return self.log_in_attempts
+
+user1 = User('kavitha', 'subramani', 'kavitha subramani', 'kavithankl@hotmail.com', 'Toronto',0)
+answer="yes"
+while answer.lower()=='yes':
+  print(f"{user1.username}, your total log in attempts:{user1.increment_login_attempts()}")
+  answer=input('Enter yes to make another log in attempt or anything to quit:')
+print(f"{user1.username} you've quitted log in.\nNow your log in attempts are: {user1.reset_login_attempts()}")
+
+
+class User():
+    """Represent a simple user profile."""
+
+    def __init__(self, first_name, last_name, username, email, location):
+        """Initialize the user."""
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+
+    def describe_user(self):
+        """Display a summary of the user's information."""
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+    def greet_user(self):
+        """Display a personalized greeting to the user."""
+        print("\nWelcome back, " + self.username + "!")
+
+    def increment_login_attempts(self):
+        """Increment the value of login_attempts."""
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        """Reset login_attempts to 0."""
+        self.login_attempts = 0
+
+user1 = User('eric', 'matthes', 'e_matthes', 'e_matthes@example.com', 'alaska')
+user1.describe_user()
+user1.greet_user()
+
+print("\nMaking 3 login attempts...")
+for i in range(3):
+  user1.increment_login_attempts()
+print("  Login attempts: " + str(user1.login_attempts))
+
+print("Resetting login attempts...")
+user1.reset_login_attempts()
+print("  Login attempts: " + str(user1.login_attempts))
+
+'''  Make a class called Planet(). Each planet will have its size(diameter) and color attribute.
+ Also create two methods called getArea() and getDiameter() that return the area and diameter of your planet respectively.
+
+sphere planet area = 3.14 * diameter
+
+In your main code, create two objects(or planets).
+
+Print the color of the larger planet (Hint: use methods to compare the size)
+    '''
+
+class Planet:
+    def __init__(self, diameter, color):
+        self.diameter = diameter
+        self.color = color
+
+    def getArea(self):
+        area= self.diameter*3.14
+        return area
+       
+    def getDiameter(self):
+        diameter= area/3.14
+        return diameter
+
+planet1 = Planet(170, "green")
+planet2 = Planet(150, "black")
+area=planet1.getArea()
+diameter=planet1.getDiameter()
+diameter =planet2.getDiameter()
+
+print("the area of sphere is",area)
+print("the diameter of sphere is",diameter)
+#print("A new planet is born:",.color,"and",planet1.size," in size")
+#print("A new planet is born:",planet2.color,"and",planet2.size," in size")
+if planet1.getDiameter() > planet2.getDiameter():
+    print("The",planet1.color," planet is larger.")
+else:
+    print("The",planet2.color, "planet is larger.")
+    
+    class planet():
+  def __init__(self, diameter,color):
+    self.diameter=diameter
+    self.color=color
+  def get_area(self):
+      area= self.diameter*3.14
+      return area
+  def get_Diameter(self):
+    diameter= area/3.14
+    return diameter
+  def compare(self):
+    self.color
+    return self.color   
+p1=planet(150,'blue')
+p2=planet(100,'red')
+area=p1.get_area()
+diameter=p2.get_Diameter()
+print("the area of sphere is",area)
+print("the diameter of sphere is",diameter)
+print("the color of planet is",p1.compare())
+print("the color of the planet2 is ",p2.compare())
+if mars.getArea() > saturn.getArea():
+  print('The '+mars.color + ' planet is larger.')
+elif saturn.getArea() > mars.getArea():
+  print('The '+saturn.color + ' planet is larger.')
+else:
+  print('They are the same size.')
+  
+  
+  class Planet():
+  def __init__(self,d,c):
+    self.size=d
+    self.color=c
+  def getArea(self):
+    return 3.14*self.size
+  def getDiameter(self):
+    return self.size
+  
+mars=Planet(4000,'red')
+print('A new planet is born: '+ mars.color +' and '+str(mars.size)+'km in size')
+saturn=Planet(10000,'orange')
+print('A new planet is born: '+ saturn.color +' and '+str(saturn.size)+'km in size')
+
+if mars.getArea() > saturn.getArea():
+  print('The '+mars.color + ' planet is larger.')
+elif saturn.getArea() > mars.getArea():
+  print('The '+saturn.color + ' planet is larger.')
+else:
+  print('They are the same size.')
+  
+  def outer_fun(a, b):
+    def inner_fun(c, d):
+        return c + d
+    return inner_fun(a, b)
+
+res = outer_fun(5, 10)
+print(res)
+class User():
+    
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name.title()
+        self.last_name = last_name.title()
+        self.username = username
+        self.email = email
+        self.location = location.title()
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print("\n" + self.first_name + " " + self.last_name)
+        print("  Username: " + self.username)
+        print("  Email: " + self.email)
+        print("  Location: " + self.location)
+
+    def greet_user(self):
+      print("\nWelcome back, " + self.username + "!")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+user1 = User('kavitha', 'subramani', 's_kavitha', 'kavitha@hotmail.com', 'Toronto')
+user1.describe_user()
+user1.greet_user()
+
+print("\nMaking 3 login attempts...")
+for i in range(3):
+  user1.increment_login_attempts()
+print("  Login attempts: " + str(user1.login_attempts))
+
+print("Resetting login attempts...")
+user1.reset_login_attempts()
+print("  Login attempts: " + str(user1.login_attempts))
+
+
+
+   
+    
+
