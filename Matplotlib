@@ -1,0 +1,193 @@
+''' What is Matplotlib? Matplotlib is a low level graph plotting library in python that serves as a visualization utility.
+
+Matplotlib was created by John D. Hunter.
+
+Matplotlib is open source and we can use it freely.https://github.com/matplotlib/matplotlib'''
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([0, 5])
+ypoints = np.array([0, 5])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([0, 1,4,3,4,2,0])
+ypoints = np.array([0, 2,3,2,3,1,0])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints=np.array([0,2,3,4,6,4,3.5,3,2,1,0])
+ypoints=np.array([0,1,2,3.5,4,5,4,2.5,2,1,0])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([0, 1,2])
+ypoints = np.array([0, 5,0])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.plot(x, y)
+
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.show()
+
+x = [1,2,3,4]
+y = [2,3,4,3]
+
+plt.plot(x,y, label = "data")
+plt.legend()
+plt.ylabel('Numbers')
+plt.xlabel('Names')
+plt.xticks([1,2,3,4],['Nano','Arnold','Mavis','Matt'])
+plt.title("Title of the Graphic")
+plt.plot (x,y,linestyle=':', color='r', lw=4.0)
+plt.show()
+
+import numpy as np
+arr = np.array([1,2,3,4,5])
+print(arr)
+print(type(arr))
+
+import numpy as np
+import matplotlib.pyplot as plt
+x1 = np.array([0, 1, 2, 3])
+y1 = np.array([3, 8, 1, 10])
+plt.plot(x1,y1)
+plt.title(" Curve Ploted given points ")
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 2])
+plt.plot(x,y)
+
+
+import numpy as np
+from scipy.interpolate import make_interp_spline
+import matplotlib.pyplot as plt
+ 
+# Dataset
+x = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+y = np.array([20, 30, 5, 12, 39, 48, 50, 3])
+ 
+X_Y_Spline = make_interp_spline(x, y)
+ 
+# Returns evenly spaced numbers
+# over a specified interval.
+X_ = np.linspace(x.min(), x.max(), 500)
+Y_ = X_Y_Spline(X_)
+ 
+# Plotting the Graph
+plt.plot(X_, Y_)
+plt.title("Plot Smooth Curve Using the scipy.interpolate.make_interp_spline() Class")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+ 
+# Dataset
+x = np.array([ 1,  2,  3,  4,  5,  6,  7, 8 ])
+y = np.array([ 20, 30, 5, 12, 39, 48, 50, 3 ])
+ 
+# Plotting the Graph
+plt.plot(x, y)
+plt.title("Curve plotted using the given points")
+plt.xlabel("X axis")
+plt.ylabel("Y axis")
+plt.show()
+
+#write python program to get the number of occurance of specified elemnent in an array
+from array import *
+array_num = array('i', [1, 2, 3, 2, 4, 5, 2])
+print("Original array: "+str(array_num))
+print("Number 2 of occurrences in array list: "+str(array_num.count(2)))
+
+
+import matplotlib.pyplot as plt
+
+def pie_chart(numbers, labels):
+  explode=(1,0,0,0)
+  plt.pie(numbers,labels=labels)
+  plt.xlabel('Gases')
+  plt.ylabel('Composition')
+  plt.title('What is in the atmosphere')
+  plt.show()
+
+numbers=[78,20.9,0.03,0.17]
+labels=['Nitrogen','Oxygen','Carbon dioxide','Other gases']
+pie_chart(numbers,labels)
+
+'''write a code to create a pie chart for the percent of nitrogen (78), oxygen(20.9), carbon dioxide(0.03) 
+and other gases(0.17) in the atmosphere'''
+import matplotlib.pyplot as plt
+def pie_chart():
+    numbers = [78, 0.03,20.9, 0.17]
+    labels = ['nitrogen', 'carbon dioxide','oxygen','Other gases']
+    colors =['green','yellow','orange','blue']
+    fig1, ax1 = plt.subplots()
+    ax1.pie(numbers, labels=labels,colors=colors)
+    plt.title("Percentage of different gasses inthe atmosphere")
+    plt.show()
+if __name__ == '__main__':
+    pie_chart()
+    
+  """ 
+Create a dictionary of the animal kingdom. The keys are mammals, fish, amphibians, reptiles and birds. 
+For each key, have a list of some species within the classification, or even another dictionary to further classify. 
+Example: 'mammals':['cow','horse','dolphin']
+Create some functions to manipulate your dictionary. 
+Sample functions: 
+-find mammal type
+-output all carnivore mammals
+"""
+
+animal_kingdom = {
+    'mammals': ['cow', 'horse', 'dolphin','tiger','lion','wolf'],
+    'fish': ['shark', 'tuna', 'salmon','lion'],
+    'amphibians': ['frog', 'toad', 'salamander'],
+    'reptiles': ['snake', 'lizard', 'crocodile'],
+    'birds': ['eagle', 'penguin', 'ostrich']
+    
+}
+def find_mammal_type(animal_kingdom):
+    return animal_kingdom['mammals']
+
+def carnivore_mammals(animal_kingdom):
+    carnivore_mammals = []
+    for mammal in animal_kingdom['mammals']:
+        if mammal in ['lion', 'tiger','wolf']:
+            carnivore_mammals.append(mammal)
+    return carnivore_mammals
+mammals =find_mammal_type(animal_kingdom)
+carnivore = carnivore_mammals(animal_kingdom)
+print("The Mammals animal list is:",mammals)
+print("The Carnivore list in mammals:",carnivore)
+
+
+
+
+
+  
+    
