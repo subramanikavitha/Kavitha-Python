@@ -1,0 +1,154 @@
+string = "kavitha"
+
+to_array = [char for char in string]
+
+print(to_array)
+
+age=input('How old is Luna now?')
+print('Wow!'+age+' is a big number!')
+
+cat='Moly'
+age= 8
+#Which output will cause an error? Why? How can it be fixed?
+print(cat,'is',age)
+print(cat+' is '+str(age))
+
+from array import *
+
+T = [[11, 12, 5, 2], [15, 6,10], [10, 8, 12, 5], [12,15,8,6]]
+
+print(T[0])
+
+print(T[1][2])
+print(T[3][2])
+
+from array import *
+
+T = [[11, 12, 5, 2], [15, 6,10]]
+
+print(T[0])
+
+print(T[1][2])
+print(T[0][2])
+
+
+from array import *
+array_num=array('i',[1,2,3,4,5])
+for i in array_num:
+ print(i)
+print("Access first 4 items individullay")
+print(array_num[0])
+print(array_num[1])
+print(array_num[2])
+print(array_num[3])
+
+
+from array import *
+array_num=array('i',[1,2,3,4,5])
+print("Original array:"+str(array_num))
+print("Append 11 at he end of  the array:")
+array_num.append(11)
+print("New array:"+str(array_num))
+
+
+#Write a Python program to get the length in bytes of one array item in the internal representation.
+from array import *
+array_num = array('i', [1, 2, 3, 4, 5])
+print("Original array: "+str(array_num))
+print("Length in bytes of one array item: "+str(array_num.itemsize))# 
+print("Length in bytes of one array item: ",len(array_num))#Number of lements in the array
+
+my_array = [1, 2, 3, 4, 5]
+array_size = len(my_array)
+print("Size of the array:", array_size)
+
+"""Create two functions that find and returns the largest and 
+the smallest numbers in a given list of positive numbers"""
+def find_smallest(listofnums):
+  smallest=1000
+  for num in listofnums:
+    if num<smallest:
+      smallest=num
+  return smallest
+def find_largest(listofnums):
+  largest=0
+  for num in listofnums:
+    if num>largest:
+      largest=num
+  return largest
+
+nums=[5,78,99,34,22,32,12,99,89]
+print(find_smallest(nums), find_largest(nums))
+
+'''
+create two functions that find and returns
+ the largest and smallest numbers in a given list of 
+positive numbers   '''
+def large_number(numbers):
+    return max(numbers)
+
+def small_number(numbers):
+    return min(numbers)
+numbers = [1, 2, 3, 4, 5]
+largest_number = large_number(numbers)
+smallest_number = small_number(numbers)
+
+print("Largest number:", largest_number)
+print("Smallest number:", smallest_number)
+
+# Question 1
+class Book:
+     # Question 2
+     def __init__(self , Title , Author , Price):
+          self.Title    =  Title
+          self.Author   =  Author
+          self.Price    =  Price
+          
+     # Question 3
+     def view(self ):
+          return ("Book Title: " , self.Title ,  "Book Author: " , self.Author, "Book Price: " , self.Price)
+          
+# Question 4
+MyBook = Book("Python Crash Course" , "Eric Matthes" , "23 $")          
+print( MyBook.view())
+# The output: ('Book Title: ', 'Python Crash Course', 'Book Author: ', 'Eric Matthes', 'Book Price: ', '23 $')
+
+found=False
+i=0
+names=['Elena','Sonia','Mary','Lopamudra','Anita','Anastasia','Anita','Tanya','Jessica','Adriana','Kanita']
+search=input('Enter name to find in list: ')
+while not found and i<len(names):
+  if search.title()==names[i]:
+    found=True
+    print(search,'is number',i+1,'on the list.')
+    break
+  else:
+    i+=1
+if not found:
+  print(search,'is not on the list')
+  
+  
+  vowels = "aeiou"
+count = 0
+for letter in 'Casandro':
+    if letter in vowels:
+        count += 1
+print("Number of vowels:", count)
+
+'''append()'''
+from array import *
+array_num=array('i',[1,2,3,4,5])
+print("Original array:"+str(array_num))
+print("Append 11 at he end of  the array:")
+array_num.append(11)
+print("New array:"+str(array_num))
+
+#Write a Python program to get the length in bytes of one array item in the internal representation.
+from array import *
+array_num = array('i', [1, 2, 3, 4, 5])
+array_num1 = array('f', [1.2, 3.5, 5.1])
+print("Original array: "+str(array_num))
+print("Length in bytes of one array item: "+str(array_num.itemsize))#an array of integers with 4 bytes
+print("Length in bytes of one array item: "+str(array_num1.itemsize))#an array of floating with 4 bytes 
+print("Length  of one array item: ",len(array_num))#Number of lements in the array
+
