@@ -1,0 +1,32 @@
+print("*****Pyshop bill*****")
+print("1.Gaming keypoard............=$9")
+print("2.Mouse Pad.........=$7")
+print("3.HDMI cable.....=$20")
+print("*************")
+sum=0
+num1=9
+num2=7
+num3=20
+while True:
+  num=int(input("Please select the item from the list:"))
+  if num ==1:
+   print("Valid item")
+   sum =sum+num1
+   print(sum)
+   continue
+  elif num==2:
+    print("*****valid item***** ")
+    sum = sum+num2
+    print(sum)
+    continue
+  elif num==3:
+    print("****** valid item ******")
+    sum= sum+num3
+    print(sum)
+    continue
+  elif num>=4:
+   print("Invalid item")
+   continue
+  elif num==-1:
+   print(sum)
+   break
