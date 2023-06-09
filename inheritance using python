@@ -1,0 +1,349 @@
+class University(): #PARENT CLASS / SUPERCLASS
+  def __init__(self, n, i):
+     print("\n A new object is created")
+     self.name = n
+     self.id = i   
+  def getID(self):
+    return self.id
+  def firstName(self):
+    fname, lname = self.name.split()
+    return fname
+  def fullName(self):
+    return self.name
+
+class Employee(University): #CHILD CLASS
+  def __init__(self, n, i, s, t):
+    super().__init__(n, i)
+    self.salary = s
+    self.title = t
+  def printAnnualSalary(self):
+    print(self.name, "earns", self.salary*12, "per year")
+  def fullName(self):
+    return (self.title + ". " + self.name )
+
+class Student(University): #Another CHILD CLASS
+  def __init__(self, n, i, cl):
+    super().__init__(n, i)
+    self.courseList = cl
+  def numCourses(self):
+    x = len(self.courseList)
+    return x
+
+###  MAIN Code
+A = University("Albert Einstein", 1788)
+print("A is an employee named", A.firstName() )
+
+B = University("Hareem Nisar", 1200)
+print("B is a student with ID", B.getID() )
+
+C = Employee("Aysha Mansoor", 8597, 5000, "Prof")
+print(C.firstName() )
+print(C.fullName() )
+C.printAnnualSalary()
+
+
+D = Student("Mandeep", 11, ["Python", "Java", "C++"])
+print(D.getID())
+#D.printAnnualSalary #error
+print("You are taking ", D.numCourses(), "courses")
+
+E = University("John Doe", 1155)
+print(E.fullName())
+
+F = Employee("Majid Maqbool", 567, 5000, "Dr")
+print(F.fullName())
+
+
+'''Write a Python class named Circle constructed from a radius and two methods that will compute the area and the perimeter of the circle '''
+class Circle:
+    def __init__(self):
+        self.radius = int(input("Enter the radius value:"))
+
+    def area(self):
+        area= self.radius ** 2 * 3.14
+        return area
+
+    def perimeter(self):
+        perimeter = 2 * self.radius * 3.14 
+        return perimeter
+obj = Circle()
+print("The Area of the circle is:",obj.area())
+print("The Perimeter of the circle:",obj.perimeter())
+
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 *3.14 * self.radius
+
+class child_Circle(Circle):
+    def __init__(self, radius):
+        super().__init__(radius)
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+radius = int(input("Ente the radius value:"))
+obj = Circle(radius)
+print("The Area of the circle is:",obj.area())
+print("The Perimeter of the circle:",obj.perimeter())
+circle = child_Circle(radius)
+print("Child of Area of circle:", circle.area())
+print("child of Perimeter of circle:", circle.perimeter())
+
+''' Write a Python class Employee with attributes 
+like emp_id, emp_name, emp_salary, and emp_department and methods like calculate_emp_salary, emp_assign_department, and print_employee_details.
+
+Sample Employee Data: "ADAMS", "E7876", 50000, "ACCOUNTING" "JONES", "E7499", 45000, "RESEARCH" "MARTIN", "E7900", 50000, "SALES" "SMITH", "E7698", 55000, "OPERATIONS" 
+Use 'assign_department' method to change the department of an employee.
+Use 'print_employee_details' method to print the details of an employee. 
+Use 'calculate_emp_salary' method takes two arguments: salary and hours_worked, 
+which is the number of hours worked by the employee. 
+If the number of hours worked is more than 50, the method computes overtime and adds it to the salary. 
+Overtime is calculated as following formula: overtime = hours_worked – 50 Overtime amount = (overtime * (salary / 50))  '''
+
+class Employee:
+    def __init__(self, emp_id, emp_name, emp_salary, emp_department):
+        self.emp_id = emp_id
+        self.emp_name = emp_name
+        self.emp_salary = emp_salary
+        self.emp_department = emp_department
+
+    def calculate_emp_salary(self, salary, hours_worked):
+         overtime = 0
+         if hours_worked > 50:
+            overtime = hours_worked - 50
+            overtime_amount = (overtime * (salary / 50))
+            return salary + overtime_amount
+         else:
+            return salary
+          
+    def emp_assign_department(self, department):
+        self.emp_department = department
+
+    def employee_details(self):
+        print("Employee ID:",self.emp_id)
+        print("Employee Name:",self.emp_name)
+        print("Employee Salary:", self.emp_salary)
+        print("Employee Department:",self.emp_department)
+        print("***************************")
+
+employee1 = Employee("001", "Kavitha", 50000, "Help desk")
+employee2 = Employee("002", "Pradeepa", 45000, "Accounting")
+employee3 = Employee("003", "Kin", 50000, "Sales")
+employee4 = Employee("004", "Anita", 55000, "customer service")
+
+
+employee1.employee_details()
+employee2.employee_details()
+employee3.employee_details()
+employee4.employee_details()
+print("Change the departments of employee1 and employee4:")
+employee1.emp_assign_department("customer service")
+employee4.emp_assign_department("help desk")
+
+#print("calculate the salary:")
+employee2.calculate_emp_salary(45000, 52)
+employee4.calculate_emp_salary(55000, 60)
+
+print("Updated Employee Details:")
+print("************************")
+employee1.employee_details()
+employee2.employee_details()
+employee3.employee_details()
+employee4.employee_details()
+
+class Employee:
+    def __init__(self, name, emp_id, salary, department):
+        self.name = name
+        self.id = emp_id
+        self.salary = salary
+        self.department = department
+
+    def calculate_salary(self, salary, hours_worked):
+        overtime = 0
+        if hours_worked > 50:
+            overtime = hours_worked - 50
+        self.salary = self.salary + (overtime * (self.salary / 50))
+
+    def assign_department(self, emp_department):
+        self.department = emp_department
+
+    def employee_details(self):
+        print("\nName: ", self.name)
+        print("ID: ", self.id)
+        print("Salary: ", self.salary)
+        print("Department: ", self.department)
+        print("*********************************")
+
+employee1 = Employee("001", "Kavitha", 50000, "Help desk")
+employee2 = Employee("002", "Pradeepa", 45000, "Accounting")
+employee3 = Employee("003", "Kin", 50000, "Sales")
+employee4 = Employee("004", "Anita", 55000, "customer service")
+print("Print the Details of Employee:")
+employee1.employee_details()
+employee2.employee_details()
+employee3.employee_details()
+employee4.employee_details()
+
+employee1.assign_department("Customer Service")
+employee4.assign_department("Help Dsek")
+
+# Now calculate the overtime of the employees who are eligible:
+employee2.calculate_salary(45000, 52)
+employee4.calculate_salary(45000, 60)
+
+print("Updated Employee Details:")
+employee1.employee_details()
+employee2.employee_details()
+employee3.employee_details()
+employee4.employee_details()
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+
+x = Student("kavitha", "subramnai")
+x.printname()
+
+count = 0
+for vowel in 'aeiou':
+if vowel in letters:
+count += 1
+return count
+
+print(count_vowels("Aaa aeeE")) # Prints 2
+print(count_vowels("eiOuayOI j_#Ra")) # Prints 5
+
+inputString = str(input("Please type a sentence: "))
+vowel_count = 0
+inputString =inputString.lower()
+vowel_count+=inputString.count("a")
+vowel_count+=inputString.count("e")
+vowel_count+=inputString.count("i")
+vowel_count+=inputString.count("o")
+vowel_count+=inputString.count("u")
+print(vowel_count)
+
+ListOfNames= []
+while True:
+    Name=input('Enter a name: ')
+    if Name=='':
+        break
+    else:
+        ListOfNames.append(Name)
+        
+print(ListOfNames)
+
+NameToSearch=input('Enter a name to search for: ')
+if NameToSearch in ListOfNames:
+    print(f'{NameToSearch} is item {ListOfNames.index(NameToSearch)+1} on the list')
+else:
+    print(f'{NameToSearch} is not in the list')
+    
+    
+class Polygon:
+    # Initializing the number of sides
+    def __init__(self, no_of_sides):
+        self.n = no_of_sides
+        self.sides = [0 for i in range(no_of_sides)]
+
+    def inputSides(self):
+        self.sides = [float(input("Enter side "+str(i+1)+" : ")) for i in range(self.n)]
+
+    # method to display the length of each side of the polygon
+    def dispSides(self):
+        for i in range(self.n):
+            print("Side",i+1,"is",self.sides[i])
+class Triangle(Polygon):
+    # Initializing the number of sides of the triangle to 3 by 
+    # calling the __init__ method of the Polygon class
+    def __init__(self):
+        Polygon.__init__(self,3)
+
+    def findArea(self):
+        a, b, c = self.sides
+
+        # calculate the semi-perimeter
+        s = (a + b + c) / 2
+         # Using Heron's formula to calculate the area of the triangle
+        area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+        print('The area of the triangle is %0.2f ' ,area)
+
+# Creating an instance of the Triangle class
+t = Triangle()
+
+# Prompting the user to enter the sides of the triangle
+t.inputSides()
+
+# Displaying the sides of the triangle
+t.dispSides()
+
+# Calculating and printing the area of the triangle
+t.findArea()
+
+class Planet():
+  def __init__(self,d,c):
+    self.size=d
+    self.color=c
+  def getArea(self):
+    return 3.14*self.size
+  def getDiameter(self):
+    return self.size
+  
+mars=Planet(4000,'red')
+print('A new planet is born: '+ mars.color +' and '+str(mars.size)+'km in size')
+saturn=Planet(10000,'orange')
+print('A new planet is born: '+ saturn.color +' and '+str(saturn.size)+'km in size')
+
+if mars.getArea() > saturn.getArea():
+  print('The '+mars.color + ' planet is larger.')
+elif saturn.getArea() > mars.getArea():
+  print('The '+saturn.color + ' planet is larger.')
+else:
+  print('They are the same size.')
+  
+  ''' Define a Book class with the following attributes: Title, Author (Full name), Price.
+Define a constructor used to initialize the attributes of the method with values entered by the user.
+Set the View() method to display information for the current book.
+Write a program to testing the Book class'''
+class Book:
+    def __init__(self):
+        self.Title = input("Enter the Title: ")
+        self.Author = input("Enter the Author:")
+        self.Price = float(input("Enter the price:"))
+
+    def View(self):
+        print("Title:", self.Title)
+        print("Author:",self.Author)
+        print("Price:", self.Price)
+book1=Book()
+book1.View()
+
+''' create   a list of  names
+the user will enter a name to search for
+if the name is not on the list it will output name not in the list
+if the name on the list it will output which item on the list it is '''
+
+name=['Kavitha','Anita','Pradeepa','Mary','Kim','Joe']
+search=input('Enter a name to search for: ')
+search=search.title()
+if search in name:
+    print(search," is Number", name.index(search)+1," on the list")
+else:
+    print(search," is not in the list")
