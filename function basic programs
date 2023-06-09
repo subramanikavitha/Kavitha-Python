@@ -1,0 +1,77 @@
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
+#print("Enter 1 to convert Fahrenheit to Celsius")
+#print("Enter 2 to convert Celsius to Fahrenheit")
+user_choice = float(input("Enter your choice: "))
+if user_choice == 1:
+        fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+        print(fahrenheit,"°F", "is equal to", fahrenheit_to_celsius(fahrenheit),"°C")
+elif user_choice == 2:
+        celsius = float(input("Enter temperature in Celsius: "))
+        print(celsius,"°C","is equal to",celsius_to_fahrenheit(celsius),"°F")
+else:
+        print("Invalid user choice")
+        
+        
+        
+def toddler_Tantrum(mood, want="candy"):
+  print("If you are",mood,'you can have',want)
+
+toddler_Tantrum("happy", "candy")
+toddler_Tantrum("sad", "bear")
+toddler_Tantrum("crying")
+toddler_Tantrum("upset","popcorn")        
+
+
+
+
+def max(a, b, c):
+ 
+    if (a >= b) and (a >= c):
+        return a
+ 
+    elif (b >= a) and (b >= c):
+        return b
+    else:
+        return c
+a=int(input("Enter 1 st number"))
+b= int(input("enter the 2 nd number"))
+c=int(input("Enter the 3 rd number"))
+print("The maximum number is :",max(a,b,c))
+         
+def maximum(a, b, c):
+    list = [a, b, c]
+    return max(list)
+a=int(input("Enter 1 st number"))
+b=int(input("enter the 2 nd number"))
+c=int(input("Enter the 3 rd number"))
+print("The maximum number is :",maximum(a,b,c))
+
+
+# Passing Arguments 
+
+# Case 1 - Positional arguments
+# order of the arguments matter!!
+
+# Pet description
+
+def myPet(typePet, namePet):
+  print("Your", typePet, namePet, "is adorable!")
+
+
+#main
+myPet("dog", "Coco")
+myPet("lily", "cat") ## oopsies!
+
+def myPet(namePet,typePet="dog"):
+  print("Your", typePet, namePet, "is adorable!")
+
+
+#main
+myPet("Silly", "Cat")
+myPet("Wolly")
