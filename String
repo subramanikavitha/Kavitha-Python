@@ -1,0 +1,297 @@
+import string
+import random
+print("Guess the missing letter")
+print('A','L',sep='--',)
+#a=input("Enter your first guess ")[0]
+#print(a)
+tries =3
+letters = set(["a","p","p","l","e"])
+inpt = input("Enter your first guess")
+if set(inpt).issubset(letters):
+    print ("letters are in list that is correct")
+else:
+    print ("letters are not in list")
+    
+    letter = "J"
+tries = 3
+
+def check_guess (guess, letter):
+    if not guess.isalpha():
+        print("Invalid")
+        return False
+    if letter == guess.upper():
+        return True
+    elif letter < guess.upper():
+        print ("Your guess is High")
+        return False
+    else:
+        print ("Your guess is Low")
+        return False
+
+def letter_guess():
+    for i in range(tries):
+        guess = input ("Enter your guess ")
+        res = check_guess (guess, letter)
+        if res:
+            print ("Correct!")
+            return True
+    return False
+
+result = letter_guess()
+if result:
+    print ("Congratulations")
+else:
+    print ("The answer was ",letter)
+print ("GAME OVER!")
+
+print('kavi',25,'Python',sep='-',end="//")
+print('kavitha',25,end='//')
+print('kavitha,25,end=//')
+
+a=float(input("enter the first number"))
+b=float(input("Enter the second number"))
+c=a*b
+print("The answer is ",c)
+
+a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+c = int(input('Enter third number: '))
+
+d = int(input('Enter fourth number: '))
+e = int(input('Enter fifth number: '))
+n= [a, b, c, d, e]
+for num in n:
+ if num%2 == 0:
+  print(num, 'is an even number')
+  continue
+ else:
+   print(num,"is odd number ")
+
+
+
+a=float(input("enter the first number"))
+b=float(input("Enter the second number"))
+c=float(input("Enter the third number"))
+d=(a+b+c)/3
+print("The answer is ",d)
+
+
+a=int(input("Enter the 1 st number"))
+b=int(input("Enter the 2 nd number"))
+c=int(input("Enter the 3 rd number"))
+d=int(input("Enter the 4 th number"))
+e=int(input("Enter the 5 th number"))
+if(a%2==0):
+  print("A is even number")
+if(b%2==0):
+  print("B is even number")
+if(c%2==0):
+  print("C is even number")
+if(d%2==0):
+  print("D is even number")
+elif(e%2==0):
+  print("e is even number") 
+else:
+  print("other nubers all are odd number")
+  
+  a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+operation = input('select the operations: add,sub,mul,div,mod')
+if(operation == 'add'):
+ c=a+b
+ print(c)
+elif(operation== 'sub'):
+ c=a-b
+ print(c)
+elif(operation== 'mul'):
+ c=a*b
+ print(c)
+elif(operation== 'div'):
+ c=a/b
+ print(c)
+elif(operation== 'mod'):
+ c=a%b
+ print(c)
+else:
+  print("this is not an option")
+
+mark1 = float(input('Enter 1 st sub mark:'))
+mark2 = float(input('Enter 2 nd  sub mark: '))
+mark3= float(input('Enter 3 st sub mark:'))
+mark4= float(input('Enter 4 nd sub mark: '))
+mark5=float(input("enter 5th sub"))
+total = mark1 + mark2 + mark3 + mark4 + mark5
+print("The total is",total)
+average = total / 5.0
+percentage = (total / 500.0) * 100
+if average >= 80:
+  print ("grade = 'A'",average)
+  print("The percentage is",percentage)
+elif average >= 70: 
+  print ("grade = 'B'",average)
+  print("The percentage is",percentage)
+elif average >= 60: 
+  print ("grade = 'C'",average)
+  print("The percentage is",percentage)
+elif average >= 50: 
+  print ("grade = 'D'",average)
+  print("The percentage is",percentage)
+else:
+   print ("grade = 'Fail'",average)
+   print("The percentage is",percentage)
+
+
+import string
+import random
+print("Guess the missing letter")
+print('A','L',sep='--',)
+#a=input("Enter your first guess ")[0]
+#print(a)
+tries =3
+letters = set(["a","p","p","l","e"])
+inpt = input("Enter your first guess")
+if set(inpt).issubset(letters):
+    print ("letters are in list that is correct")
+else:
+    print ("letters are not in list")
+    
+    '''seperation using this line'''
+    
+    print('kavi',25,sep='-')
+    
+    
+    print('kavi',25,'Python',sep='-',end="//")
+print('kavitha',25,end='//')
+print('kavitha,25,end=//')
+    '''********************'''
+    
+    
+    import string
+import random
+print("Guess the missing letter")
+print('A','L',sep='--',)
+#a=input("Enter your first guess ")[0]
+#print(a)
+tries =3
+letters = set(["a","p","p","l","e"])
+inpt = input("Enter your first guess")
+if set(inpt).issubset(letters):
+    print ("letters are in list that is correct")
+else:
+    print ("letters are not in list")
+    
+    letter = "J"
+tries = 3
+
+a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+c = int(input('Enter third number: '))
+
+d = int(input('Enter fourth number: '))
+e = int(input('Enter fifth number: '))
+n= [a, b, c, d, e]
+for num in n:
+ if num%2 == 0:
+  print(num, 'is an even number')
+  
+ else:
+  continue
+  
+  a=int(input("Enter the 1 st number"))
+b=int(input("Enter the 2 nd number"))
+c=int(input("Enter the 3 rd number"))
+d=int(input("Enter the 4 th number"))
+e=int(input("Enter the 5 th number"))
+if(a%2==0):
+  print("A is even number")
+if(b%2==0):
+  print("B is even number")
+if(c%2==0):
+  print("C is even number")
+if(d%2==0):
+  print("D is even number")
+elif(e%2==0):
+  print("e is even number") 
+else:
+  print("other nubers all are odd number")
+  
+  
+  a = int(input('Enter first number: '))
+b = int(input('Enter second number: '))
+operation = input('select the operations: add,sub,mul,div,mod')
+if(operation == 'add'):
+ c=a+b
+ print(c)
+elif(operation== 'sub'):
+ c=a-b
+ print(c)
+elif(operation== 'mul'):
+ c=a*b
+ print(c)
+elif(operation== 'div'):
+ c=a/b
+ print(c)
+elif(operation== 'mod'):
+ c=a%b
+ print(c)
+else:
+  print("this is not an option")
+
+
+mark1 = float(input('Enter 1 st sub mark:'))
+mark2 = float(input('Enter 2 nd  sub mark: '))
+mark3= float(input('Enter 3 st sub mark:'))
+mark4= float(input('Enter 4 nd sub mark: '))
+mark5=float(input("enter 5th sub"))
+total = mark1 + mark2 + mark3 + mark4 + mark5
+print("The total is",total)
+average = total / 5.0
+percentage = (total / 500.0) * 100
+if average >= 80:
+  print ("grade = 'A'",average)
+  print("The percentage is",percentage)
+elif average >= 70: 
+  print ("grade = 'B'",average)
+  print("The percentage is",percentage)
+elif average >= 60: 
+  print ("grade = 'C'",average)
+  print("The percentage is",percentage)
+elif average >= 50: 
+  print ("grade = 'D'",average)
+  print("The percentage is",percentage)
+else:
+   print ("grade = 'Fail'",average)
+   print("The percentage is",percentage)
+
+
+
+
+def check_guess (guess, letter):
+    if not guess.isalpha():
+        print("Invalid")
+        return False
+    if letter == guess.upper():
+        return True
+    elif letter < guess.upper():
+        print ("Your guess is High")
+        return False
+    else:
+        print ("Your guess is Low")
+        return False
+
+def letter_guess():
+    for i in range(tries):
+        guess = input ("Enter your guess ")
+        res = check_guess (guess, letter)
+        if res:
+            print ("Correct!")
+            return True
+    return False
+
+result = letter_guess()
+if result:
+    print ("Congratulations")
+else:
+    print ("The answer was ",letter)
+print ("GAME OVER!")
+
