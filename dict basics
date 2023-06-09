@@ -1,0 +1,81 @@
+#Dict:
+car = {
+ "brand":"Honda",
+ "model" :"Civic",
+"year":2020,
+"year":2023, #overwrites the previous year
+"list_fruits":["apple","banana"]#you can have lists in dict
+}
+print(car)
+car.update({"year":2020})#update the year to 2020
+print(car["brand"])#way 1-print part of dictionary
+x=car['model']
+print(x)#way 2 -print an item in dict
+x=car.get("year")
+print(x)#way 3 - print an item in dict
+x=car.keys()#print the keys
+print(x)
+x=car.values()#Print the values
+print(x)
+print(len(car))
+print(type(car))
+#another program
+favorite_languages = {
+ 'jen': 'python',
+ 'sarah': 'c',
+ 'edward': 'ruby',
+ 'phil': 'python',
+ }
+
+for n in favorite_languages.keys(): #for name in favorite_languages: will also give you the same result
+  print(n)
+print()
+#Two different ways of outputting values
+for d in favorite_languages.values():
+  print(d)
+
+print()
+for x,y in favorite_languages.items():
+  print(y) # y is values
+  #print(x,y)
+for x,y in favorite_languages.items():
+  print(x) # x is keys
+for name in favorite_languages.keys():
+  print(name.title() + ", thank you for taking the poll.")
+  print()
+for name in sorted(favorite_languages.keys()):
+ print(name.title() , ", thank you for taking the poll.")
+ 
+ #another program
+  country = {
+    'nile': 'egypt',
+    'mississippi': 'united states',
+    'fraser': 'canada',
+    'kuskokwim': 'alaska',
+    'yangtze': 'china'
+ }
+ for x, y in country.items():
+  print('The ' + x.capitalize() + ' flows through '  + y.capitalize())
+  
+  #another program
+  """Create a dictionary of countries - Kenya, Korea, Georgia, Tibet, Myanmar, Brazil, Cuba with their capitals . Print the keys and values of your dictionary. Use popitem to delete the last item in your dictionary """
+countries = {
+  "Kenya": "Nairobi",
+  "Korea": "Seoul",
+  "Georgia": "Tbilisi",
+  "Tibet": "Lhasa",
+  "Myanmar": "Naypyidaw",
+  "Brazil": "Brasília",
+  "Cuba": "Havana"
+}
+
+for key in countries.items():
+  print(countries)
+for y in sorted (countries.keys()):
+  print(y,',sorted the key values')
+  print()
+for x in countries.values():
+  print(x.title()+',captial')   
+  print()
+countries.popitem()   
+print(countries)
